@@ -35,17 +35,19 @@ const Producto = ({producto, productos, changuito, agregarProducto}) => {
     
     return ( 
         <Fragment>
-            <div>
-                <h3>{id} {articulo} {precio}</h3>
+          
+            <div class="list-group-item py-3" for="listGroupCheckableRadios1">
+                
+                <h3 class="mb-0" class="mb-0 opacity-75">{id} {articulo} {precio}</h3>
                 {
                     productos
                     ?
-                        <button
+                        <button class="btn btn-secondary my-2"
                             type="button"
                             onClick={ () => seleccionarProducto(id)}
                         >Comprar</button>
                     :
-                        <button
+                        <button class="btn btn-secondary my-2"
                             type="button"
                             onClick={() => eliminarProducto(id)}
                         >Eliminar</button>

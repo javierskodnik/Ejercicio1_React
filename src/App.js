@@ -11,8 +11,10 @@ function App() {
   //listado de productos con un state
   //primero va la variable que yo voy a tocar, y luego de la "," va la función
   //que se encarga de modificar el estado inicial
+ 
 
   const [productos, guardarProductos] = useState ([
+  
     {id:1, articulo: "Zapatillas Para Tenis", precio: 8000},
     {id:2, articulo: "Camiseta Termica", precio: 2000},
     {id:3, articulo: "Palo de Hockey", precio: 4500},
@@ -27,8 +29,8 @@ function App() {
 
   return (
     <Fragment className="App">
-      <Header />
-      <h1>Indumentaria Deportiva - Venta Online</h1>
+      <Header/>
+      <h3 pb-2 border-bottom>Indumentaria Deportiva - Venta Online</h3>
       
       {productos.map(producto =>
         (
@@ -39,7 +41,6 @@ function App() {
 
             // vamos a pasar la lista de productos para poder hacer "seleccionar productos"
             productos = {productos}
-
             changuito = {changuito}
             agregarProducto = {agregarProducto}
           />
